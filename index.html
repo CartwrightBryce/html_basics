@@ -5,21 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bryce Cartwright</title>
 <style>
-  h1 {font-size: 100px; font-style: italic; font-weight: bold; text-align: center; margin:auto;}
+  h1 {font-size: 100px; font-style: italic; font-weight: bold; text-align: center; margin-bottom: 20px; z-index: 1;}
   #song-lyric-head {background-color: yellowgreen}
-  h1, h2, h3, h4, h5, h6 {color: rgb(185, 190, 189); font-size: 25px; margin:auto; }
+  h1, h2, h3, h4, h5, h6 {color: rgb(185, 190, 189); font-size: 25px; margin:5px 3px 5px 3px; text-align: center; }
   body {background-color: darkslategray;}
   .gurgle {color: yellowgreen;}
+  #genre-table {position:relative; left:50px;}
   body {line-height:1em ; margin: auto; padding:50px;}
   #variety {color: yellow}
-  .div-class {background-color:teal; width:70%; margin: auto; padding: 5px; }
+  .div-class {background-color:teal; width: 70%; margin: auto; padding: 5px; }
   p {margin: auto}
   #bryce-tori { margin:auto; border: medium solid darkslategray;}
   #bryce-gibson {margin-bottom: 5px; border: medium solid plum;}
+  #side-bar {float: right; margin-top: 20px; width:30%; background-color: teal; }
   
   </style>
 </head>
-<body>
+<body id= top-link>
 
   <h1> All about <a href="#bryce-info"> Bryce </a></h1>
     
@@ -45,7 +47,7 @@
            blah <strong class= gurgle> gurgle </strong> blah <br>
           <strong class= gurgle> gurgle </strong> blah <strong class= gurgle> gurgle </strong> </p> <br>
           <p>Example of inlfulences by genre for the band</p>
-          <table>
+          <table id=genre-table>
             <thead>
               <tr>
                 <th>Thrash</th>
@@ -73,7 +75,13 @@
         <li>Be cosistent with my studying</li>
         <li>Devolop a deep understanding of the software</li> </ol>
     </dive>
+  <div id=side-bar>
+  <h7>Quick Links</h7>
+    <ul>
+      <li><a href= #top-link>Top of Page</a></li>
+      <li><a href= #bottom-link>Bottom of Page</a></li>
+  </div>
 
 
-</body>
+</body id=bottom-link>
 </html>
