@@ -1,6 +1,12 @@
-//Page-using-module
-var stuff = require("./module");
+var http = require("http");
+var fs = require("fs");
 
-console.log(stuff.sum(4, 5));
-console.log(stuff.array(["bryce", "Tori"]));
-console.log(stuff.pi);
+var myReadStream = fs.createReadStream(__dirname + "/readMe.txt");
+
+myReadStream.on("error", function (err) {
+  console.log(err);
+  myReadStream.on("data", function (chunk) {
+    console.log("new chunk received:");
+    console.log("chunk");
+  });
+});
