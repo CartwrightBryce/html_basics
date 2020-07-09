@@ -1,12 +1,21 @@
-var http = require("http");
-var fs = require("fs");
+var express = require("express");
+var app = express();
 
-var myReadStream = fs.createReadStream(__dirname + "/readMe.txt");
+app.set("view engine", "ejs");
+app.use("/", express.static("assets"));
 
-myReadStream.on("error", function (err) {
-  console.log(err);
-  myReadStream.on("data", function (chunk) {
-    console.log("new chunk received:");
-    console.log("chunk");
-  });
+app.get("/index", function (req, res) {
+  res.render("index");
 });
+app.get("/blank", function (req, res) {
+  res.render("blank");
+});
+app.get("/profile/:id", function (req, res) {
+  var data = {
+    age: 24,
+    job: "ninja",
+    hobbies: ["guitar", "eating", "sleeping"],
+  };
+  res.render("profile", { person: req.params.id, data: data });
+});
+app.listen(5000);

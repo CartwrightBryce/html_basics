@@ -1,0 +1,13 @@
+body {
+  background: skyblue;
+  font-family: monospace;
+  padding: 20px;
+}
+h1 {
+  font-size: 40px;
+  margin: auto;
+}
+p {
+  font-size: 20px;
+  margin: auto;
+}
