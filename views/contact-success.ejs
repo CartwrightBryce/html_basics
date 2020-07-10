@@ -1,0 +1,18 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #contact-form {
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include ('partial/nav'); %>
+    <h1>Thanks for getting in touch!</h1>
+    <p>You contacted <%= data.who%> in the <%=data.department%> department</p>
+    <p>We will reply to you via <%=data.email%></p>
+  </body>
+</html>
